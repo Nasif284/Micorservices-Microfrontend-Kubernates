@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service
+  labels:
+    app: order-service
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: order-service
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+        - name: order-service
+          image: order-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4002
+              name: http
+          env:
+            - name: PORT
+              value: "4002"
+            - name: USER_GRPC_URL
+              value: "user-service:50051"
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: microservices-secret
+                  key: JWT_SECRET
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: microservices-secret
+                  key: DATABASE_URL
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 4002
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 4002
+            initialDelaySeconds: 15
+            periodSeconds: 15

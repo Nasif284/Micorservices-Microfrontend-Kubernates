@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  labels:
+    app: user-service
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service
+          image: user-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4001
+              name: http
+            - containerPort: 50051
+              name: grpc
+          env:
+            - name: PORT
+              value: "4001"
+            - name: GRPC_PORT
+              value: "50051"
+            - name: JWT_EXPIRES_IN
+              value: "24h"
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: microservices-secret
+                  key: JWT_SECRET
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: microservices-secret
+                  key: MONGODB_URI
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 4001
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 4001
+            initialDelaySeconds: 10
+            periodSeconds: 15

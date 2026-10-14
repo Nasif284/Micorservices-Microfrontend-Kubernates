@@ -1,0 +1,173 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nasif",
+      "email": "nasif@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "John",
+      "email": "john@example.com",
+      "password": "123456"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "VeDt-5Jcw9k"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "W-lp4TIEM8Y"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "L0y7aHJ9lZg"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "ty1MfikqmPw"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "i60pNFIzsn4"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "LYqWBA3fLRU"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "bCAfsnRJbic"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "d13O_RVcOrI"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "PZbOjEZxgnY"
+    },
+    {
+      "name": "nasif pariyaram",
+      "email": "nasif@gmail.com",
+      "password": "1234",
+      "id": "a7xIANreK9E"
+    },
+    {
+      "name": "Muhammad Nasif",
+      "email": "nasifhima@gmail.com",
+      "password": "1234",
+      "id": "vc8w1Uq3RLY"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif asdf",
+      "id": "xHFq3X78wic"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "CmK3oNP8HoQ"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "RZKtdFsWkLw"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "an7nOHvxxpM"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "mCfM0A3-rS4"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "TPatud9Pgrk"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "hibuCK7t6jg"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "6xS_IzfaIds"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "1TafzfxX3vs"
+    },
+    {
+      "email": "nasif@example.com",
+      "password": "123456",
+      "name": "nasif",
+      "id": "62LW3QP_hMI"
+    }
+  ],
+  "orders": [
+    {
+      "id": "101",
+      "userId": "1",
+      "product": "Laptop",
+      "amount": 75000,
+      "status": "Delivered"
+    },
+    {
+      "id": "102",
+      "userId": "1",
+      "product": "Keyboard",
+      "amount": 2500,
+      "status": "Pending"
+    },
+    {
+      "id": "103",
+      "userId": "2",
+      "product": "Monitor",
+      "amount": 18000,
+      "status": "Shipped"
+    },
+    {
+      "id": "104",
+      "userId": "2",
+      "product": "Mouse",
+      "amount": 1200,
+      "status": "Delivered"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,150 @@
+:root {
+    font-family: Inter, system-ui, sans-serif;
+    color: #172033;
+    background: #f4f7fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    padding: .65rem 1rem;
+    background: #3157d5;
+    color: white;
+}
+
+.navbar {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0 6vw;
+    background: #172a5b;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.brand {
+    font-weight: 800;
+    margin-right: auto;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-name {
+    font-size: .9rem;
+}
+
+.page,
+.panel {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.panel {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px #17203312;
+}
+
+.form {
+    max-width: 440px;
+}
+
+.field {
+    display: grid;
+    gap: .4rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    border: 1px solid #cbd3e4;
+    border-radius: 8px;
+    padding: .7rem;
+}
+
+.actions,
+.links {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links {
+    margin-top: 1rem;
+}
+
+.links a {
+    color: #3157d5;
+}
+
+.error {
+    color: #b42318;
+}
+
+.success {
+    color: #18794e;
+}
+
+.loading {
+    padding: 2rem;
+    text-align: center;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    text-align: left;
+    padding: .75rem;
+    border-bottom: 1px solid #e5e9f2;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.stat {
+    padding: 1rem;
+    background: #edf1ff;
+    border-radius: 10px;
+}
+
+.error-panel {
+    border-left: 4px solid #b42318;
+}
+
+.error-panel h2 {
+    color: #b42318;
+}
